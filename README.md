@@ -2,5 +2,5 @@
 Calculadora Basica creada haciendo uso de JavaFX
 
 # Autores
-Samuel Rusinque 
+Samuel Rusinque &
 Sara Sofía Gómez Cújar
