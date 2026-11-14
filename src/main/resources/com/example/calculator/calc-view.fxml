@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="base" alignment="CENTER" prefHeight="655.0" prefWidth="500.0" spacing="20.0" style="-fx-background-color: #E8EBFF;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calculator.calcController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <ButtonBar prefHeight="7.0" prefWidth="460.0">
+     <buttons>
+         <ToggleButton fx:id="mode" minWidth="0.0" mnemonicParsing="false" onAction="#cambiarModo" prefHeight="18.0" style="-fx-background-color: rgba(255, 255, 255, 0.65); -fx-background-radius: 15;" styleClass="calc-button" text="☾" textAlignment="RIGHT" textFill="#bf2b2b">
+            <font>
+               <Font size="23.0" />
+            </font>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </ToggleButton>
+     </buttons>
+   </ButtonBar>
+
+          <Label fx:id="welcomeText">
+      <graphic>
+         <Label fx:id="pantalla" alignment="CENTER" contentDisplay="CENTER" prefHeight="236.0" prefWidth="438.0" style="-fx-background-color: #D9DDF5; -fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #BF2B2B; -fx-border-width: 2;" textFill="#bf2b2b">
+            <font>
+               <Font name="MathJax_Math-Italic" size="41.0" />
+            </font></Label>
+      </graphic>
+   </Label>
+   <GridPane hgap="3.0">
+     <columnConstraints>
+       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+     </columnConstraints>
+     <rowConstraints>
+       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+     </rowConstraints>
+      <children>
+          <Button fx:id="suma" onAction="#accionSuma" prefHeight="32.0" prefWidth="93.0" style="-fx-background-color: rgba(255, 255, 255, 0.65); -fx-background-radius: 10; -fx-border-radius: 10;" styleClass="calc-button" text="+" textFill="#bf2b2b" GridPane.halignment="CENTER">
+            <font>
+               <Font name="MathJax_Math-BoldItalic" size="17.0" />
+            </font>
+         </Button>
+         <Button fx:id="resta" onAction="#accionResta" prefHeight="32.0" prefWidth="93.0" style="-fx-background-color: rgba(255, 255, 255, 0.65); -fx-background-radius: 10; -fx-border-radius: 10;" styleClass="calc-button" text="-" textFill="#bf2b2b" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+            <font>
+               <Font name="MathJax_Math-BoldItalic" size="17.0" />
+            </font>
+         </Button>
+         <Button fx:id="multi" onAction="#accionMultiplicacion" prefHeight="32.0" prefWidth="93.0" style="-fx-background-color: rgba(255, 255, 255, 0.65); -fx-background-radius: 10; -fx-border-radius: 10;" styleClass="calc-button" text="*" textFill="#bf2b2b" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+            <font>
+               <Font name="MathJax_Math-BoldItalic" size="17.0" />
+            </font>
+         </Button>
+         <Button fx:id="div" onAction="#accionDivision" prefHeight="32.0" prefWidth="93.0" style="-fx-background-color: rgba(255, 255, 255, 0.65); -fx-background-radius: 10; -fx-border-radius: 10;" styleClass="calc-button" text="/" textFill="#bf2b2b" GridPane.columnIndex="3" GridPane.halignment="CENTER">
+            <font>
+               <Font name="MathJax_Math-BoldItalic" size="17.0" />
+            </font>
+         </Button>
+         <Button fx:id="decimal" onAction="#accionDecimal" prefHeight="32.0" prefWidth="93.0" style="-fx-background-color: rgba(255, 255, 255, 0.65); -fx-background-radius: 10; -fx-border-radius: 10;" styleClass="calc-button" text="." textFill="#bf2b2b" GridPane.columnIndex="4">
+            <font>
+               <Font name="MathJax_Math-BoldItalic" size="17.0" />
+            </font>
+         </Button>
+      </children>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </GridPane>
+   <GridPane alignment="CENTER" layoutX="30.0" layoutY="198.0" vgap="7.0">
+      <columnConstraints>
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+      <children>
+         <Button id="buttons" fx:id="uno" alignment="CENTER" contentDisplay="CENTER" onAction="#agregarUno" prefHeight="32.0" prefWidth="93.0" style="-fx-background-color: rgba(255, 255, 255, 0.65); -fx-background-radius: 10; -fx-border-radius: 10;" styleClass="calc-button" text="1" textAlignment="CENTER" textFill="#bf2b2b" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+            <font>
+               <Font name="MathJax_Math-BoldItalic" size="17.0" />
+            </font></Button>
+         <Button id="buttons" fx:id="dos" alignment="CENTER" contentDisplay="CENTER" onAction="#agregarDos" prefHeight="32.0" prefWidth="93.0" style="-fx-background-color: rgba(255, 255, 255, 0.65); -fx-background-radius: 10; -fx-border-radius: 10;" styleClass="calc-button" text="2" textAlignment="CENTER" textFill="#bf2b2b" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+            <font>
+               <Font name="MathJax_Math-BoldItalic" size="17.0" />
+            </font></Button>
+         <Button id="buttons" fx:id="tres" alignment="CENTER" contentDisplay="CENTER" onAction="#agregarTres" prefHeight="32.0" prefWidth="93.0" style="-fx-background-color: rgba(255, 255, 255, 0.65); -fx-background-radius: 10; -fx-border-radius: 10;" styleClass="calc-button" text="3" textAlignment="CENTER" textFill="#bf2b2b" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+            <font>
+               <Font name="MathJax_Math-BoldItalic" size="17.0" />
+            </font></Button>
+         <Button id="buttons" fx:id="cuatro" alignment="CENTER" contentDisplay="CENTER" onAction="#agregarCuatro" prefHeight="32.0" prefWidth="93.0" style="-fx-background-color: rgba(255, 255, 255, 0.65); -fx-background-radius: 10; -fx-border-radius: 10;" styleClass="calc-button" text="4" textAlignment="CENTER" textFill="#bf2b2b" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+            <font>
+               <Font name="MathJax_Math-BoldItalic" size="17.0" />
+            </font></Button>
+         <Button id="buttons" fx:id="cinco" alignment="CENTER" contentDisplay="CENTER" onAction="#agregarCinco" prefHeight="32.0" prefWidth="93.0" style="-fx-background-color: rgba(255, 255, 255, 0.65); -fx-background-radius: 10; -fx-border-radius: 10;" styleClass="calc-button" text="5" textAlignment="CENTER" textFill="#bf2b2b" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+            <font>
+               <Font name="MathJax_Math-BoldItalic" size="17.0" />
+            </font></Button>
+         <Button id="buttons" fx:id="seis" alignment="CENTER" contentDisplay="CENTER" onAction="#agregarSeis" prefHeight="32.0" prefWidth="93.0" style="-fx-background-color: rgba(255, 255, 255, 0.65); -fx-background-radius: 10; -fx-border-radius: 10;" styleClass="calc-button" text="6" textAlignment="CENTER" textFill="#bf2b2b" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+            <font>
+               <Font name="MathJax_Math-BoldItalic" size="17.0" />
+            </font></Button>
+         <Button id="buttons" fx:id="siete" alignment="CENTER" contentDisplay="CENTER" onAction="#agregarSiete" prefHeight="32.0" prefWidth="93.0" style="-fx-background-color: rgba(255, 255, 255, 0.65); -fx-background-radius: 10; -fx-border-radius: 10;" styleClass="calc-button" text="7" textAlignment="CENTER" textFill="#bf2b2b" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+            <font>
+               <Font name="MathJax_Math-BoldItalic" size="17.0" />
+            </font></Button>
+         <Button id="buttons" fx:id="ocho" alignment="CENTER" contentDisplay="CENTER" onAction="#agregarOcho" prefHeight="32.0" prefWidth="93.0" style="-fx-background-color: rgba(255, 255, 255, 0.65); -fx-background-radius: 10; -fx-border-radius: 10;" styleClass="calc-button" text="8" textAlignment="CENTER" textFill="#bf2b2b" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+            <font>
+               <Font name="MathJax_Math-BoldItalic" size="17.0" />
+            </font></Button>
+         <Button id="buttons" fx:id="nueve" alignment="CENTER" contentDisplay="CENTER" onAction="#agregarNueve" prefHeight="32.0" prefWidth="93.0" style="-fx-background-color: rgba(255, 255, 255, 0.65); -fx-background-radius: 10; -fx-border-radius: 10;" styleClass="calc-button" text="9" textAlignment="CENTER" textFill="#bf2b2b" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+            <font>
+               <Font name="MathJax_Math-BoldItalic" size="17.0" />
+            </font></Button>
+         <Button fx:id="cero" alignment="CENTER" contentDisplay="CENTER" onAction="#agregarCero" prefHeight="32.0" prefWidth="93.0" style="-fx-background-color: rgba(255, 255, 255, 0.65); -fx-background-radius: 10; -fx-border-radius: 10;" styleClass="calc-button" text="0" textAlignment="CENTER" textFill="#bf2b2b" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+            <font>
+               <Font name="MathJax_Math-BoldItalic" size="17.0" />
+            </font></Button>
+         <Button id="buttons" fx:id="clear" alignment="CENTER" contentDisplay="CENTER" onAction="#accionClear" prefHeight="32.0" prefWidth="93.0" style="-fx-background-color: rgba(255, 255, 255, 0.65); -fx-background-radius: 10; -fx-border-radius: 10;" styleClass="calc-button" text="Clear" textAlignment="CENTER" textFill="#bf2b2b" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+            <font>
+               <Font name="MathJax_Math-BoldItalic" size="17.0" />
+            </font></Button>
+         <Button id="buttons" fx:id="igual" alignment="CENTER" contentDisplay="CENTER" onAction="#accionIgual" prefHeight="32.0" prefWidth="93.0" style="-fx-background-color: rgba(255, 255, 255, 0.65); -fx-background-radius: 10; -fx-border-radius: 10;" styleClass="calc-button" text="=" textAlignment="CENTER" textFill="#bf2b2b" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+            <font>
+               <Font name="MathJax_Math-BoldItalic" size="17.0" />
+            </font></Button>
+      </children>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </GridPane>
+</VBox>
