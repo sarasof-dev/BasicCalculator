@@ -1,6 +1,6 @@
 # BasicCalculator
 Calculadora Basica creada haciendo uso de JavaFX
 
-#Autores
+# Autores
 Samuel Rusinque 
 Sara Sofía Gómez Cújar
